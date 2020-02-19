@@ -53,4 +53,17 @@ public class CatTest {
         Assert.assertEquals(catName, givenName);
     }
 
+    // TODO - Create tests for `speak`
+    @Test
+    public void testSpeak(){
+        //given
+        Cat cat = new Cat(null,null,null);
+        String expected = "meow!";
+
+        //when
+        String actual = cat.speak();
+
+        //then
+        Assert.assertEquals(expected,actual);
+    }
 }
