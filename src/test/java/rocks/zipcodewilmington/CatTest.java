@@ -40,4 +40,17 @@ public class CatTest {
         Assert.assertEquals(givenId, retrievedId);
     }
 
+    // TODO - Create tests for `void setName(String name)`
+    @Test
+    public void testSetName(){
+        //given
+        Cat cat = new Cat("Zula",null,null);
+        String givenName = "Zula";
+        //when
+        cat.setName(givenName);
+        String catName = cat.getName();
+        //then
+        Assert.assertEquals(catName, givenName);
+    }
+
 }
