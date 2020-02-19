@@ -2,7 +2,9 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Animal;
 import rocks.zipcodewilmington.animals.Dog;
+import rocks.zipcodewilmington.animals.Mammal;
 
 import java.util.Date;
 
@@ -37,7 +39,6 @@ public class DogTest {
         String givenName = "";
         Date givenBirthDate = new Date();
         Integer givenId = 0;
-
         //when
         Dog dog1 = new Dog(givenName, givenBirthDate, givenId);
         String retrievedName = dog1.getName();
@@ -98,5 +99,23 @@ public class DogTest {
         //then
         Integer actual = dog1.getId();
         Assert.assertEquals(expected, actual);
+    }
+
+    // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
+    @Test
+    public void testAnimalInheritance(){
+        //when
+        Dog dog1 = new Dog(null, null, null);
+        //then
+        Assert.assertTrue(dog1 instanceof Animal);
+    }
+
+    // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
+    @Test
+    public void testMammalInheritance(){
+        //when
+        Dog dog1 = new Dog(null, null, null);
+        //then
+        Assert.assertTrue(dog1 instanceof Mammal);
     }
 }
