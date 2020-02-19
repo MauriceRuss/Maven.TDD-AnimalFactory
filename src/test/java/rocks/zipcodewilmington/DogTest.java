@@ -88,4 +88,15 @@ public class DogTest {
         Integer actual = dog1.getNumberOfMealsEaten();
         Assert.assertEquals(expected, actual);
     }
+    // TODO - Create tests for `Integer getId()`
+    @Test
+    public void testGetId(){
+        //given
+        Dog dog1 = new Dog(null, null, 1);
+        //when
+        Integer expected = 1;
+        //then
+        Integer actual = dog1.getId();
+        Assert.assertEquals(expected, actual);
+    }
 }
