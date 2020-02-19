@@ -48,4 +48,16 @@ public class DogTest {
         Assert.assertEquals(givenBirthDate, retrievedBirthDate);
         Assert.assertEquals(givenId, retrievedId);
     }
+
+    // TODO - Create tests for `speak`
+    @Test
+    public void testSpeak(){
+        //given
+        Dog dog1 = new Dog(null, null, null);
+        String expected = "bark!";
+        //when
+        String actual = dog1.speak();
+        //then
+        Assert.assertEquals(expected, actual);
+    }
 }
