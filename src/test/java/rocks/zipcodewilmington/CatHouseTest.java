@@ -45,7 +45,17 @@ public class CatHouseTest {
     }
 
     // TODO - Create tests for `void remove(Cat cat)`
-//    @Test
-//    public void test
+    @Test
+    public void testRemoveCat(){
+        //given
+        CatHouse bed = new CatHouse();
+        Cat cat1 = new Cat(null, null, null);
+        //when
+        bed.remove(cat1);
+        String expected = "";
+        //then
+        String actual = "";
+        Assert.assertEquals(expected, actual);
+    }
 
 }
