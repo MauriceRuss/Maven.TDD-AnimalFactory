@@ -32,7 +32,7 @@ public class CatHouseTest {
 
     // TODO - Create tests for `void remove(Integer id)`
     @Test
-    public void testRemove(){
+    public void testRemoveId(){
         //given
         CatHouse bed = new CatHouse();
         Cat cat1 = new Cat(null, null, 1);
@@ -42,7 +42,10 @@ public class CatHouseTest {
         //then
         Integer actual = cat1.getId();
         Assert.assertEquals(expected, actual);
-
     }
+
+    // TODO - Create tests for `void remove(Cat cat)`
+//    @Test
+//    public void test
 
 }
