@@ -74,4 +74,18 @@ public class DogTest {
         Date actual = dog1.getBirthDate();
         Assert.assertEquals(expected, actual);
     }
+
+    // TODO - Create tests for `void eat(Food food)`
+    @Test
+    public void testEat(){
+        //given
+        Dog dog1 = new Dog(null, null, null);
+        Food can = new Food();
+        //when
+        dog1.eat(can);
+        Integer expected = 1;
+        //then
+        Integer actual = dog1.getNumberOfMealsEaten();
+        Assert.assertEquals(expected, actual);
+    }
 }
