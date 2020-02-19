@@ -60,4 +60,18 @@ public class DogTest {
         //then
         Assert.assertEquals(expected, actual);
     }
+
+    // TODO - Create tests for `setBirthDate(Date birthDate)`
+    @Test
+    public void testSetBirthDate(){
+        //given
+        Dog dog1 = new Dog(null, null, null);
+        Date birthDate = new Date();
+        //when
+        dog1.setBirthDate(birthDate);
+        Date expected = birthDate;
+        //then
+        Date actual = dog1.getBirthDate();
+        Assert.assertEquals(expected, actual);
+    }
 }
