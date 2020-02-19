@@ -41,10 +41,19 @@ public class DogHouseTest {
     // TODO - Create tests for `void add(Dog dog)`
 
     @Test
-    public void testAdd(){
+    public void testAddDog(){
         //given
         Dog dog1 = new Dog("Holly", new Date(), 1);
         DogHouse.add(dog1);
         Assert.assertEquals(dog1, DogHouse.getDogById(1));
+    }
+
+    // TODO - Create tests for `void remove(Integer id)`
+    @Test
+    public void testRemoveDogWithId(){
+        Dog dog1 = new Dog("Holly", new Date(), 1);
+        DogHouse.add(dog1);
+        DogHouse.remove(1);
+        Assert.assertEquals(null, DogHouse.getDogById(1));
     }
 }

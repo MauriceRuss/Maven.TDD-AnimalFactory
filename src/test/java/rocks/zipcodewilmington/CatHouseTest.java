@@ -25,7 +25,7 @@ public class CatHouseTest {
 
     // TODO - Create tests for `void add(Cat cat)`
     @Test
-    public void testAdd(){
+    public void testAddCat(){
         //given
         Cat cat1 = new Cat("gabby", new Date(), 1);
         //when
@@ -36,7 +36,7 @@ public class CatHouseTest {
 
     // TODO - Create tests for `void remove(Integer id)`
     @Test
-    public void testRemoveById(){
+    public void testRemoveCatById(){
         //given
         Cat cat1 = new Cat("gabby", new Date(), 1);
         CatHouse.add(cat1);
