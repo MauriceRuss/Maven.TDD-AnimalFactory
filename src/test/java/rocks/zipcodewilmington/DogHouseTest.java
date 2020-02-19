@@ -56,4 +56,13 @@ public class DogHouseTest {
         DogHouse.remove(1);
         Assert.assertEquals(null, DogHouse.getDogById(1));
     }
+
+    // TODO - Create tests for `void remove(Dog dog)`
+    @Test
+    public void testRemoveDog(){
+        Dog dog1 = new Dog("Holly", new Date(), 1);
+        DogHouse.add(dog1);
+        DogHouse.remove(dog1);
+        Assert.assertEquals(null, DogHouse.getDogById(1));
+    }
 }
