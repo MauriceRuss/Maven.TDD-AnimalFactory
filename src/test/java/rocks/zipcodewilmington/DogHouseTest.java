@@ -1,5 +1,7 @@
 package rocks.zipcodewilmington;
 
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Dog;
 import rocks.zipcodewilmington.animals.animal_creation.AnimalFactory;
@@ -17,6 +19,11 @@ public class DogHouseTest {
     // TODO - Create tests for `Dog getDogById(Integer id)`
     // TODO - Create tests for `Integer getNumberOfDogs()`
 
+    @Before
+    public void BeforeTest(){
+        DogHouse.clear();
+    }
+
     @Test
     public void testGetNumberOfDogs() {
         // Given (some
@@ -30,5 +37,14 @@ public class DogHouseTest {
 
         // Then
         DogHouse.getNumberOfDogs();
+    }
+    // TODO - Create tests for `void add(Dog dog)`
+
+    @Test
+    public void testAdd(){
+        //given
+        Dog dog1 = new Dog("Holly", new Date(), 1);
+        DogHouse.add(dog1);
+        Assert.assertEquals(dog1, DogHouse.getDogById(1));
     }
 }
