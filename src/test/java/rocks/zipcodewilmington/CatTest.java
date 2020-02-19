@@ -81,4 +81,21 @@ public class CatTest {
         Date actual = cat.getBirthDate();
         Assert.assertEquals(expected, actual);
     }
+
+    // TODO - Create tests for `void eat(Food food)`
+    @Test
+    public void testEat(){
+        //given
+        Cat cat = new Cat(null, null, null);
+        Food can = new Food();
+        //when
+        cat.eat(can);
+        Integer expected = 1;
+        //then
+        Integer actual = cat.getNumberOfMealsEaten();
+        Assert.assertEquals(expected,actual);
+
+
+
+    }
 }
