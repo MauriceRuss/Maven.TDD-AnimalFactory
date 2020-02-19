@@ -29,4 +29,20 @@ public class CatHouseTest {
         Integer actual = bed.getNumberOfCats();
         Assert.assertEquals(expected, actual);
     }
+
+    // TODO - Create tests for `void remove(Integer id)`
+    @Test
+    public void testRemove(){
+        //given
+        CatHouse bed = new CatHouse();
+        Cat cat1 = new Cat(null, null, 1);
+        //when
+        bed.remove(1);
+        Integer expected = 1;
+        //then
+        Integer actual = cat1.getId();
+        Assert.assertEquals(expected, actual);
+
+    }
+
 }
