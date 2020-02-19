@@ -61,10 +61,8 @@ public class CatTest {
         //given
         Cat cat1 = new Cat(null,null,null);
         String expected = "meow!";
-
         //when
         String actual = cat1.speak();
-
         //then
         Assert.assertEquals(expected,actual);
     }
@@ -78,7 +76,6 @@ public class CatTest {
         //when
         cat1.setBirthDate(birthDate);
         Date expected = birthDate;
-
         //then
         Date actual = cat1.getBirthDate();
         Assert.assertEquals(expected, actual);

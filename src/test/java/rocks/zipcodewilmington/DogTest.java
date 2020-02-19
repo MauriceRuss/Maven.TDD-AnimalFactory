@@ -28,4 +28,5 @@ public class DogTest {
         String dogName = dog.getName();
         Assert.assertEquals(dogName, givenName);
     }
+    // TODO - Create tests for `new Dog(String name, Date birthDate, Integer id)`
 }
