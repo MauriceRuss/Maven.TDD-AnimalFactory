@@ -66,4 +66,19 @@ public class CatTest {
         //then
         Assert.assertEquals(expected,actual);
     }
+
+    // TODO - Create tests for `setBirthDate(Date birthDate)`
+    @Test
+    public void testSetBirthDate(){
+        //given
+        Cat cat = new Cat(null, null, null);
+        Date birthDate = new Date();
+        //when
+        cat.setBirthDate(birthDate);
+        Date expected = birthDate;
+
+        //then
+        Date actual = cat.getBirthDate();
+        Assert.assertEquals(expected, actual);
+    }
 }
